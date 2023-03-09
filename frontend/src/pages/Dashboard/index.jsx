@@ -68,8 +68,8 @@ console.log(contents);
 
           {contents.map((content) => {
             return (
-              <div className="content-list">
-                <h2 onClick={()=>getContentInfo(content.id)}>
+              <div className="content-list" onClick={()=>getContentInfo(content.id)}>
+                <h2>
                   {content.name}
                 </h2>
                 <p>{Object.keys(content.fields).length}</p>

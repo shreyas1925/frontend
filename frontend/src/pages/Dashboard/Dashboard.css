@@ -95,6 +95,7 @@
     font-family: "roboto", sans-serif;
     cursor: pointer;
     display: flex;
+    justify-content: space-between;
 }
 
 .content-list h2{
