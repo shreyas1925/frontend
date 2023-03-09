@@ -6,21 +6,6 @@ import icon from '../../assets/icon.png'
 // import ContentTypeContext from '../../context/ContentTypeContext'
 const Viewbar = ({contents}) => {
 
-  // const { ContentType } = React.useContext(ContentTypeContext);
-
-  // console.log(ContentType);
-  // React.useEffect(() => {
-  //   makeRequest('get','/api/getContents',{})
-  //   .then(res => {
-  //     console.log(res);
-  //     setContents(res.data)
-  //   })
-  //   .catch(err => {
-  //     console.log(err)
-  //   })
-  // },[])
-
-
   return (
     <div className='viewbar--container'>
       <div className='viewbar--header'>
