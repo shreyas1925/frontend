@@ -1,0 +1,230 @@
+.dashboard--container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #f0f2ff;
+}
+
+.dashboard--content{
+    width: 75%;
+    height: 100%;
+    display: flex;
+}
+
+.dashboard--content--left{
+    width: 35%;
+    height: 100%;
+    background-color: #d4d6e5;
+}
+
+.dashboard--content--right{
+    width: 65%;
+    height: 100%;
+    background-color: #eaeefe;
+}
+.header{
+    background-color: #ffffff;
+    height: 50px;
+    padding: 10px;
+    line-height: 50px;
+}
+
+.header h1{
+    color:black;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.dashboard--header{
+    background-color: #ffffff;
+    height: 50px;
+    padding: 10px;
+    line-height: 50px;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.dashboard--types{
+    color:white;
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dashboard--types h1{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    color:#afafaf
+}
+
+.dashboard--types img{
+    width: 25px;
+    height: 25px;
+    margin-right: 0px;
+    margin-top: -6px;
+    padding-left:100px ;
+}
+
+.content-type--button{
+    border:1px dotted #5906ce;
+    width: 220px;
+    margin-left: 42px;
+    margin-top: -70px;
+    padding: 16px;
+    padding-left: 40px;
+    color:#5906ce;
+    text-align: center;
+    font-family: "roboto", sans-serif;
+    cursor: pointer;
+}
+.content-list{
+    background-color: white;
+    width: 200px;
+    border-radius: 8px;
+    margin-left: 42px;
+    margin-top:30px;
+    padding: 16px;
+    padding-left: 60px;
+    color:#afafaf;
+    font-family: "roboto", sans-serif;
+    cursor: pointer;
+    display: flex;
+}
+
+.content-list h2{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.content-list p{
+    font-size: 16px;
+    font-weight: 500;
+    color:#afafaf;
+}
+
+.content-list:hover{
+    background-color: #5906ce;
+    width: 200px;
+    border-radius: 8px;
+    margin-left: 42px;
+    margin-top:30px;
+    padding: 16px;
+    padding-left: 60px;
+    color:#fff;
+    font-family: "roboto", sans-serif;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.content--header{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+}
+
+.content--header h1{
+    font-size: 20px;
+    font-weight: 800;
+    color:black;
+    font-family: "roboto", sans-serif;
+}
+
+.content--header p{
+    margin-top: -80px;
+    margin-left: 0px;
+}
+
+.content--header img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.content-type--btn{
+    border:1px dotted #5906ce;
+    width: 550px;
+    margin-left: 30px;
+    margin-top: 37px;
+    padding: 16px;
+    padding-left: 60px;
+    color:#5906ce;
+    font-family: "roboto", sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+
+.content--field{
+    border:none;
+    width: 580px;
+    margin-left: 30px;
+    margin-top: 37px;
+    color:black;
+    font-family: "roboto", sans-serif;
+    cursor: pointer;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 24px;
+}
+.content--field h2,h3{
+    font-size: 18px;
+    font-weight: 500;
+    color:#afafaf;
+}
+
+.content--field h2{
+    margin-left: 30px;
+}
+
+.content--field h3{
+    margin-right: 25px;
+}
+
+.string{
+    position: relative;
+}
+.string p{
+    background-color: #7791fe;
+    color:white;
+    width: 55px;
+    position:absolute;
+    top: 38px;
+    line-height: 70px;
+    border-radius: 8px 0px 0px 8px;
+    height: 72px;
+    text-align: center;
+
+}
+
+.contents{
+    display: flex;
+    padding: 16px;
+    justify-content: space-around;
+}
+
+.contents h2{
+    font-size: 16px;
+}
+
+.images{
+    width:15px;
+    height: 15px;
+    display: flex;
+    margin-right:40px ;
+    justify-content: space-between;
+}
+
+.images img{
+    width: 15px;
+    height: 15px;
+    margin-left:20px;
+}
