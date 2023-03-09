@@ -10,9 +10,8 @@ import Modal from "../../components/Modal";
 
 const Dashboard = () => {
   const [showModal, setShowModal] = React.useState(false);
-  const [contentLength, setContentLength] = React.useState(0);
   const [contents, setContents] = React.useState([]);
-  const [field,setField] = React.useState()
+  const [contentById, setContentById] = React.useState([]);
 
   React.useEffect(() => {
     axios
@@ -24,30 +23,25 @@ const Dashboard = () => {
       .catch((err) => {
         console.log(err);
       });
-
-    axios
-      .get("http://localhost:5000/api/getContentCount")
-      .then((res) => {
-        console.log(res);
-        setContentLength(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
   }, []);
 
   const getContentInfo = (id) => {
     axios
-      .get(`http://localhost:5000/api/getFieldCount/${id}`)
+      .get(`http://localhost:5000/api/contents/${id}`)
       .then((res) => {
-        setField(res.data)
+        console.log(res);
+        setContentById(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
+   
   };
 
+  console.log("sa",contentById);
+// console.log(Object.keys(contents.fields).length);
+
+console.log(contents);
   return (
     <div className="dashboard--container">
       <Viewbar contents={contents} />
@@ -59,7 +53,7 @@ const Dashboard = () => {
           </div>
 
           <div className="dashboard--types">
-            <h1>{contentLength} Types</h1>
+            <h1>{contents.length} Types</h1>
             <img src={icon} alt="" />
           </div>
 
@@ -75,8 +69,10 @@ const Dashboard = () => {
           {contents.map((content) => {
             return (
               <div className="content-list">
-                <h2 onClick={()=>getContentInfo(content.id)}>{content.name}</h2>
-                <p>{field}</p>
+                <h2 onClick={()=>getContentInfo(content.id)}>
+                  {content.name}
+                </h2>
+                <p>{Object.keys(content.fields).length}</p>
               </div>
             );
           })}
@@ -87,14 +83,14 @@ const Dashboard = () => {
           <div className="content--header">
             <div>
               <h1>Company profile</h1>
-              <p>{field} Fields</p>
+              <p>{`${Object.keys(contentById.fields).length} fields`}</p>
             </div>
             <img src={pencil} alt="" />
           </div>
 
           <div className="content-type--btn">Add Another field</div>
 
-          {contents.map((content) => {
+          {contentById.fields && Object.keys(contentById.fields).map((ele) => {
             return (
               <>
                 <div className="string">
@@ -104,7 +100,7 @@ const Dashboard = () => {
                 <div className="content--field">
                   {/* <div className="contents"> */}
                   <div>
-                    <h2>name</h2>
+                    <h2>{ele}</h2>
                   </div>
                   <div>
                     <h3>String</h3>
@@ -118,7 +114,7 @@ const Dashboard = () => {
                 {/* </div> */}
               </>
             );
-          })}
+           })} 
         </div>
       </div>
     </div>
