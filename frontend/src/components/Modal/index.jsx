@@ -24,9 +24,24 @@ export default function Modal(props) {
     //     console.log(res);
     //     // window.location.reload();
     // };
+
+    console.log(props.oldKey);
   
     const handleSubmit = async() => {
-        if(props.contentId){
+        if(props.oldKey){
+            const res = await axios({
+                method:'PUT',
+                url:`http://localhost:5000/api/updateContentField/${props.contentId}`,
+                data:{
+                    old:props.oldKey,
+                    new:name
+                }
+            });
+            console.log(res);
+            window.location.reload();
+            
+        }
+        else if(props.contentId){
             const res = await axios({
                 method:'PATCH',
                 url:`http://localhost:5000/api/updateContent/${props.contentId}`,
@@ -73,4 +88,6 @@ Modal.propTypes = {
     onClose: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired,
     contentId: PropTypes.string,
+    operation: PropTypes.bool,
+    oldKey:PropTypes.string
 };

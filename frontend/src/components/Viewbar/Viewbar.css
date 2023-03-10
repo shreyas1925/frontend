@@ -24,7 +24,10 @@
 .viewbar--contents{
     margin-left: 25px;
     margin-top: -50px;
+    cursor: pointer;
 }
+
+
 
 .viewbar--contents li{
     color:#afafaf;
@@ -32,6 +35,13 @@
     margin-bottom: 15px;
     font-family: "roboto", sans-serif;
 }
+
+.viewbar--contents li:hover{
+    color: white;
+    background-color: black;
+    padding:5px;
+    transition: all 0.3s ease-in-out;
+}  
 
 .viewbar--types h1{
     font-family: "Roboto", sans-serif;

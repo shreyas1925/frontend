@@ -12,7 +12,7 @@
     border-radius: 20px;
     padding: 30px;
     width: 1000px;
-    margin-top: -20px;
+    margin-top: -70px;
     background-color: white;
 }
 
@@ -49,6 +49,7 @@
     border: none;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
+    padding-left: 5px;
 }
 
 .modal-footer {

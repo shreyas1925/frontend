@@ -31,6 +31,8 @@
     width: 150px;
 }
 
+
+
 .new-entry-div:hover {
     cursor: pointer;
     background-color: rgba(235, 238, 254, 255);
@@ -87,4 +89,19 @@
     height: 100vh;
     width: 100vw;
     flex-direction: row;
+}
+
+.header{
+    background-color: #ffffff;
+    height: 50px;
+    padding: 10px;
+    line-height: 50px;
+}
+
+.header h1{
+    color:black;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    margin-left: 22px;
 }

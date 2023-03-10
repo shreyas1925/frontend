@@ -1,6 +1,6 @@
 import React from 'react';
 import './Dashboard.css';
-import {  FieldModal, Viewbar } from '../../components';
+import { Viewbar, FieldModal } from '../../components';
 import icon from '../../assets/icon.png';
 import axios from 'axios';
 import pencil from '../../assets/pencil.png';
@@ -10,6 +10,7 @@ import Modal from '../../components/Modal';
 
 const Dashboard = () => {
     const [showModal, setShowModal] = React.useState(false);
+    const [showModal1, setShowModal1] = React.useState(false);
     const [contents, setContents] = React.useState([]);
     const [contentById, setContentById] = React.useState([]);
     const [contentName, setContentName] = React.useState('');
@@ -39,14 +40,15 @@ const Dashboard = () => {
             });
     };
 
-    const handleDelete = async(ele,id) => {
-        console.log(ele,id);
+    const handleDelete = async (ele, id) => {
+        console.log(ele, id);
         const res = await axios({
-            method:'DELETE',
-            url:`http://localhost:5000/api/deleteContentField/${id}`,
-            data:{fieldKey:ele}
+            method: 'DELETE',
+            url: `http://localhost:5000/api/deleteContentField/${id}`,
+            data: { fieldKey: ele },
         });
         console.log(res);
+        window.location.reload();
     };
 
     return (
@@ -71,7 +73,7 @@ const Dashboard = () => {
             + New Type
                     </div>
 
-                    <Modal onClose={() => setShowModal(false)} show={showModal}/>
+                    <Modal onClose={() => setShowModal(false)} show={showModal} />
 
                     {contents &&
             contents.map((content, id) => {
@@ -95,15 +97,27 @@ const Dashboard = () => {
                                 <h1>{contentName ? contentName : 'Company_Profile'}</h1>
                                 <p>
                                     {contentById.fields &&
-                    `${Object.keys(contentById.fields).length} fields`
-                                    }
+                    `${Object.keys(contentById.fields).length} fields`}
                                 </p>
                             </div>
-                            <img src={pencil} alt=""  onClick={() => setShowModal(true)}/>
+                            <img src={pencil} alt="" onClick={() => setShowModal(true)} />
                         </div>
-                        <Modal onClose={() => setShowModal(false)} show={showModal} contentId={contentById.id}/>
-                        <div className="content-type--btn" onClick={() => setShowModal(true)}>Add Another field</div>
-                        <FieldModal onClose={() => setShowModal(false)} show={showModal} contentId={contentById.id}/>
+                        <Modal
+                            onClose={() => setShowModal(false)}
+                            show={showModal}
+                            contentId={contentById.id}
+                        />
+                        <div
+                            className="content-type--btn"
+                            onClick={() => setShowModal1(true)}
+                        >
+              Add Another field
+                        </div>
+                        <FieldModal
+                            onClose={() => setShowModal1(false)}
+                            show={showModal1}
+                            contentId={contentById.id}
+                        />
 
                         {contentById.fields &&
               Object.keys(contentById.fields).map((ele) => {
@@ -123,9 +137,22 @@ const Dashboard = () => {
                               </div>
 
                               <div className="images">
-                                  <img src={edit} alt="" onClick={() => setShowModal(true)}/>
-                                  <Modal onClose={() => setShowModal(false)} show={showModal} contentId={contentById.id}/>
-                                  <img src={deleteIcon} alt="" onClick={()=>handleDelete(ele,contentById.id)}/>
+                                  <img
+                                      src={edit}
+                                      alt=""
+                                      onClick={() => setShowModal(true)}
+                                  />
+                                  <Modal
+                                      onClose={() => setShowModal(false)}
+                                      show={showModal}
+                                      contentId={contentById.id}
+                                      oldKey={ele}
+                                  />
+                                  <img
+                                      src={deleteIcon}
+                                      alt=""
+                                      onClick={() => handleDelete(ele, contentById.id)}
+                                  />
                               </div>
                           </div>
                           {/* </div> */}
