@@ -8,7 +8,6 @@ describe("EntryModal", () => {
         onClose={() => {}}
         show={true}
         fields={["name", "description"]}
-        l
       />
     );
     expect(asFragment()).toMatchSnapshot();

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageNotFound Page Snapshot should render forming a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container--page"
+    data-testid="notfound"
+  >
+    <div
+      class="container--content"
+    >
+      <img
+        alt=""
+        src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif"
+      />
+      <div
+        class="container--description"
+      >
+        <h1>
+          404
+        </h1>
+        <h5>
+          Look like you are lost , return to home 
+        </h5>
+        <button
+          class="link_404"
+        >
+          <a
+            href="/"
+          >
+            Go to Home
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

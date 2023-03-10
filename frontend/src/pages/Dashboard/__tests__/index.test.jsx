@@ -10,7 +10,6 @@ describe("Dashboard", () => {
   it("should render and have text", () => {
     const { getByText } = render(<BrowserRouter> <Dashboard /></BrowserRouter>);
     expect(getByText("+ New Type")).toBeInTheDocument();
-  })
+  });
 
-  
 });

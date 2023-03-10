@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegisterPage should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="main--container"
+  >
+    <div
+      class="left--container"
+    >
+      <div
+        class="text--container"
+      >
+        <h1>
+          Design APIs fast,
+        </h1>
+        <h1>
+          Manage content easily
+        </h1>
+      </div>
+      <div
+        class="image--container"
+      >
+        <img
+          alt=""
+          src="people.png"
+        />
+      </div>
+    </div>
+    <div
+      class="right--container"
+    >
+      <h1>
+        Register to your CMS+ account
+      </h1>
+      <form
+        action=""
+        class="form--container"
+      >
+        <p>
+          Email
+        </p>
+        <input
+          autocomplete="off"
+          name="email"
+          type="email"
+          value=""
+        />
+        <p>
+          Password
+        </p>
+        <input
+          autocomplete="off"
+          name="password"
+          type="password"
+          value=""
+        />
+        <button
+          class="btn"
+          type="submit"
+        >
+          Register
+        </button>
+        <div
+          class="form--footer"
+        >
+          <p>
+            Already an user ? 
+          </p>
+           
+          <a
+            href="/login"
+          >
+            Login
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

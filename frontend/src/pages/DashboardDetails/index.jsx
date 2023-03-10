@@ -86,13 +86,18 @@ export default function DashboardDetails() {
                     </div>
                     <div className="table-content-title">
                         <div className="content-entries-fields">
-                            {fields.map((key, id) => {
+                            {/* {fields.map((key, id) => {
                                 return (
                                     <div key={id}>
                                         <span>{key}</span>
                                     </div>
                                 );
-                            })}
+                            })} */}
+                            <span>ID</span>
+                            <span>{fields[0]}</span>
+                            <span>{fields[1]}</span>
+                            <span>{fields[2]}</span>
+                            <span>{fields[3]}</span>
                         </div>
                         <span>Actions</span>
                     </div>
@@ -104,7 +109,7 @@ export default function DashboardDetails() {
                                         className="content-entries-fields"
                                         style={{ marginLeft: '15px',paddingLeft:'15px' }}
                                     >
-                                        {/* <span>{contentEntries[key].id}</span> */}
+                                        <span>{contentEntries[key].id}</span>
                                         <span>{contentEntries[key].fields[fields[0]]}</span>
                                         <span>{contentEntries[key].fields[fields[1]]}</span>
                                         <span>{contentEntries[key].fields[fields[2]]}</span>
