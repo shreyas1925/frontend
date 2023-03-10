@@ -1,3 +1,5 @@
-import Form from './Form';
+
+import EntryModal from './EntryModal';
+import Modal from './Modal';
 import Viewbar from './Viewbar';
-export { Form,Viewbar };
+export {EntryModal,Modal,Viewbar };
