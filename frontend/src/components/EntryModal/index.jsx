@@ -7,7 +7,7 @@ export default function EntryModal(props) {
     }
     return (
         <div className="modal" onClick={props.onClose}>
-            <div className="modal-contents" onClick={e => e.stopPropagation()}>
+            <div className="modal-content" onClick={e => e.stopPropagation()}>
                 <div className='modal-header'>
                     <span className='modal-title'>New Company Profile</span>
                 </div>
@@ -47,6 +47,6 @@ export default function EntryModal(props) {
 }
 
 EntryModal.propTypes = {
-    onClose: PropTypes.func,
-    show: PropTypes.bool,
+    onClose: PropTypes.func.isRequired,
+    show: PropTypes.bool.isRequired,
 };

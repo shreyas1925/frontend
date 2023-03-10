@@ -24,7 +24,7 @@ export default function Viewbar ({contents}) {
                     })
                 }
             </div>
-            <div className='builder'>
+            <div className='builder' onClick={()=>navigate('/dashboard')}>
                 <h2> Content type builder</h2>
             </div>
         </div>

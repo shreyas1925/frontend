@@ -14,6 +14,16 @@ export default function Modal(props) {
         setName(e.target.value);
     };
 
+    // const addField = async() => {
+    //     const res = await axios({
+    //         method:'POST',
+    //         url:`http://localhost:5000/api/addFields/${props.contentId}`,
+    //         data:{newfield:name}
+    //     });
+
+    //     console.log(res);
+    //     // window.location.reload();
+    // };
   
     const handleSubmit = async() => {
         if(props.contentId){
@@ -31,6 +41,7 @@ export default function Modal(props) {
                 data:{content:name}
             });
             console.log(res);
+            window.location.reload();
         }
     };
    
@@ -49,8 +60,8 @@ export default function Modal(props) {
                     <button onClick={props.onClose} className="modal-close-button-post">
             Close
                     </button>
-                    <button className="modal-create-button-post" onClick={handleSubmit}>
-                        {props.contentId ? 'Create' : 'Update'}
+                    <button className="modal-create-button-post" onClick={()=>{handleSubmit();}}>
+                        {props.contentId ? 'Update' : 'Create'}
                     </button>
                 </div>
             </div>

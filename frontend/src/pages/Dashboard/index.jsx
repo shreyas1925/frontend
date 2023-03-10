@@ -1,6 +1,6 @@
 import React from 'react';
 import './Dashboard.css';
-import { Viewbar } from '../../components';
+import {  FieldModal, Viewbar } from '../../components';
 import icon from '../../assets/icon.png';
 import axios from 'axios';
 import pencil from '../../assets/pencil.png';
@@ -12,7 +12,6 @@ const Dashboard = () => {
     const [showModal, setShowModal] = React.useState(false);
     const [contents, setContents] = React.useState([]);
     const [contentById, setContentById] = React.useState([]);
-
     const [contentName, setContentName] = React.useState('');
 
     React.useEffect(() => {
@@ -40,10 +39,15 @@ const Dashboard = () => {
             });
     };
 
-    // console.log('sa',contentById);
-    // console.log(Object.keys(contents.fields).length);
-    // setContentName(contentById.name);
-    // console.log(contentName);
+    const handleDelete = async(ele,id) => {
+        console.log(ele,id);
+        const res = await axios({
+            method:'DELETE',
+            url:`http://localhost:5000/api/deleteContentField/${id}`,
+            data:{fieldKey:ele}
+        });
+        console.log(res);
+    };
 
     return (
         <div className="dashboard--container">
@@ -67,7 +71,7 @@ const Dashboard = () => {
             + New Type
                     </div>
 
-                    <Modal onClose={() => setShowModal(false)} show={showModal} />
+                    <Modal onClose={() => setShowModal(false)} show={showModal}/>
 
                     {contents &&
             contents.map((content, id) => {
@@ -89,16 +93,17 @@ const Dashboard = () => {
                         <div className="content--header">
                             <div>
                                 <h1>{contentName ? contentName : 'Company_Profile'}</h1>
-                                {/* <p>
-                                    {contentById &&
+                                <p>
+                                    {contentById.fields &&
                     `${Object.keys(contentById.fields).length} fields`
                                     }
-                                </p> */}
+                                </p>
                             </div>
                             <img src={pencil} alt=""  onClick={() => setShowModal(true)}/>
                         </div>
-                        <Modal onClose={() => setShowModal(false)} show={showModal} contentById={contentById}/>
-                        <div className="content-type--btn">Add Another field</div>
+                        <Modal onClose={() => setShowModal(false)} show={showModal} contentId={contentById.id}/>
+                        <div className="content-type--btn" onClick={() => setShowModal(true)}>Add Another field</div>
+                        <FieldModal onClose={() => setShowModal(false)} show={showModal} contentId={contentById.id}/>
 
                         {contentById.fields &&
               Object.keys(contentById.fields).map((ele) => {
@@ -118,8 +123,9 @@ const Dashboard = () => {
                               </div>
 
                               <div className="images">
-                                  <img src={edit} alt="" />
-                                  <img src={deleteIcon} alt="" />
+                                  <img src={edit} alt="" onClick={() => setShowModal(true)}/>
+                                  <Modal onClose={() => setShowModal(false)} show={showModal} contentId={contentById.id}/>
+                                  <img src={deleteIcon} alt="" onClick={()=>handleDelete(ele,contentById.id)}/>
                               </div>
                           </div>
                           {/* </div> */}

@@ -23,10 +23,9 @@ export default function DashboardDetails() {
 
     const [showModal, setShowModal] = React.useState(false);
     return (
-        <div className='details--container'>
-            <Viewbar contents={contents}/>
+        <div className='details'>
+            <Viewbar contents={contents} />
             <div className='content-entry-container'>
-                
                 <div className='content-entrie-title'>
                     <span className='entrie-count'>13 Entries Found</span>
                     <div onClick={() => setShowModal(true)} className='new-entry-div'>
@@ -105,8 +104,9 @@ export default function DashboardDetails() {
                         </div>
                     </div>
                 </div>
-
+    
             </div>
         </div>
+        
     );
 }
