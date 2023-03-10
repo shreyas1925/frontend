@@ -63,5 +63,4 @@ EntryModal.propTypes = {
     onClose: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired,
     fields: PropTypes.array.isRequired,
-
 };

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field Modal should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="modal-post"
+  >
+    <div
+      class="modal-content-post"
+    >
+      <div
+        class="modal-header-post"
+      >
+        <span
+          class="modal-title-post"
+        >
+          Create a new content type
+        </span>
+      </div>
+      <div
+        class="modal-body-post"
+      >
+        <span>
+          Name of the content type
+        </span>
+        <input
+          name="content"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="modal-footer-post"
+      >
+        <button
+          class="modal-close-button-post"
+        >
+          Close
+        </button>
+        <button
+          class="modal-create-button-post"
+        >
+          Create
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

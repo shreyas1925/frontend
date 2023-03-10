@@ -31,10 +31,9 @@ const Login = () => {
         localStorage.setItem('token', res.data);
         navigate('/dashboard');
     };
-    
-   
+
     console.log(token);
-    
+
     const { values, errors, handleChange, handleBlur, touched, handleSubmit } =
     useFormik({
         initialValues: initialValues,
@@ -48,11 +47,11 @@ const Login = () => {
         <div className="main--container">
             <div className="left--container">
                 <div className="text--container">
-                    <h1>Design APIs fast,
-                    </h1>
-                    <h1>
-            Manage content easily</h1>
+                    <h1>Design APIs fast,</h1>
+                    <h1>Manage content easily</h1>
                 </div>
+                <div className="circle"></div>
+                <div className="circle"></div>
                 <div className="image--container">
                     <img src={people} alt="" />
                 </div>

@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntryModal should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="modal"
+  >
+    <div
+      class="modal-content"
+    >
+      <div
+        class="modal-header"
+      >
+        <span
+          class="modal-title"
+        >
+          New Company Profile
+        </span>
+      </div>
+      <div
+        class="modal-body"
+      >
+        <div>
+          <span>
+            name
+          </span>
+          <input
+            value=""
+          />
+        </div>
+        <div>
+          <span>
+            description
+          </span>
+          <input
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="modal-footer"
+      >
+        <button
+          class="modal-close-button"
+        >
+          Close
+        </button>
+        <button
+          class="modal-Add-button"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`EntryModal should render correctly with props 1`] = `
+<DocumentFragment>
+  <div
+    class="modal"
+  >
+    <div
+      class="modal-content"
+    >
+      <div
+        class="modal-header"
+      >
+        <span
+          class="modal-title"
+        >
+          New Company Profile
+        </span>
+      </div>
+      <div
+        class="modal-body"
+      >
+        <div>
+          <span>
+            name
+          </span>
+          <input
+            value=""
+          />
+        </div>
+        <div>
+          <span>
+            description
+          </span>
+          <input
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="modal-footer"
+      >
+        <button
+          class="modal-close-button"
+        >
+          Close
+        </button>
+        <button
+          class="modal-Add-button"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

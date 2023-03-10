@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard should render correctly 1`] = `
+<DocumentFragment>
+   
+  <div
+    class="dashboard--container"
+  >
+    <div
+      class="viewbar--container"
+    >
+      <div
+        class="viewbar--header"
+      >
+        CMS+
+      </div>
+      <div
+        class="viewbar--types"
+      >
+        <h1>
+          Collection Types
+        </h1>
+        <img
+          alt=""
+          src="icon.png"
+        />
+      </div>
+      <div
+        class="viewbar--contents"
+      />
+      <div
+        class="builder"
+      >
+        <h2>
+           Content type builder
+        </h2>
+      </div>
+    </div>
+    <div
+      class="dashboard--content"
+    >
+      <div
+        class="dashboard--content--left"
+      >
+        <div
+          class="header"
+        >
+          <h1>
+            Content Types
+          </h1>
+        </div>
+        <div
+          class="dashboard--types"
+        >
+          <h1>
+            0 Types
+          </h1>
+          <img
+            alt=""
+            src="icon.png"
+          />
+        </div>
+        <div
+          class="content-type--button"
+        >
+          + New Type
+        </div>
+      </div>
+      <div
+        class="dashboard--content--right"
+      >
+        <div
+          class="dashboard--header"
+        />
+        <div
+          class="content--header"
+        >
+          <div>
+            <h1>
+              Company_Profile
+            </h1>
+            <p />
+          </div>
+          <img
+            alt=""
+            src="pencil.png"
+          />
+        </div>
+        <div
+          class="content-type--btn"
+        >
+          Add Another field
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
