@@ -83,7 +83,6 @@ p{
     width: 450px;
     margin-left:280px;
     margin-top: -50px;
-    background-image: url(https://images.unsplash.com/photo-1517841900229-3a7b3a5b3d8e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2dyb3VuZCUyMGNvbnRyb2xzJTIwY2F0ZWdvcnklMjBjb2xvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -102,4 +101,13 @@ p{
     color: #7d7d7d;
     margin-top: 100px;
     margin-left: 100px;
+}
+
+@media screen and (max-width: 768px){
+    .left--container{
+        display: none;
+    }
+    .right--container{
+        width: 100%;
+    }
 }

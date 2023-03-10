@@ -73,3 +73,12 @@
     margin-top: 20px;
     text-transform: uppercase;
 }
+
+@media screen and (max-width:900px)
+{
+    .viewbar--container{
+        width:100%;
+        background-color: #272727;
+        color:white;
+    }
+}

@@ -105,3 +105,21 @@
     font-weight: 500;
     margin-left: 22px;
 }
+
+.content-entries-actions img{
+    width:20px;
+    height: 20px;
+    margin-right: 10px;
+}   
+
+@media screen and (max-width:800px)
+{
+    .details{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-entry-container{
+        width: 100vw;
+    }
+}

@@ -28,12 +28,13 @@ const Login = () => {
         // console.log(token);
         // console.log(res.data);
         setToken(res.data);
+        localStorage.setItem('token', res.data);
         navigate('/dashboard');
     };
+    
+   
     console.log(token);
-
-    localStorage.setItem('token', token);
-
+    
     const { values, errors, handleChange, handleBlur, touched, handleSubmit } =
     useFormik({
         initialValues: initialValues,

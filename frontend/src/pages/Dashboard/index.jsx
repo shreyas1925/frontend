@@ -15,6 +15,8 @@ const Dashboard = () => {
     const [contentById, setContentById] = React.useState([]);
     const [contentName, setContentName] = React.useState('');
 
+    // const token = localStorage.getItem('token');
+
     React.useEffect(() => {
         axios
             .get('http://localhost:5000/api/getContents')

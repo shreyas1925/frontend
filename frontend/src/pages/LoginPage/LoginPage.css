@@ -74,3 +74,12 @@ p{
     margin-left: 25px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px){
+    .left--container{
+        display: none;
+    }
+    .right--container{
+        width: 100%;
+    }
+}

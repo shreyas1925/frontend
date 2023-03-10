@@ -1,6 +1,6 @@
 .dashboard--container{
     display: flex;
-    height: 100%;
+   min-height: 100vh;
     width: 100%;
     background-color: #f0f2ff;
 }
@@ -13,7 +13,7 @@
 
 .dashboard--content--left{
     width: 35%;
-    height: 100%;
+    min-height: 100vh;
     background-color: #d4d6e5;
 }
 
@@ -229,3 +229,46 @@
     height: 15px;
     margin-left:20px;
 }
+
+@media screen and (max-width:900px)
+{
+    .dashboard--container{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100%;
+        background-color: #f0f2ff;
+    }
+
+    .dashboard--content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .dashboard--content--left{
+        width: 100%;
+        min-height: 100vh;
+        background-color: #d4d6e5;
+    }
+    
+    .dashboard--content--right{
+        width: 100%;
+        height: 100%;
+        background-color: #eaeefe;
+    }
+
+    .content-type--btn{
+        margin:30px;
+        margin-bottom: 40px;
+    }
+
+    .string{
+        margin-top:60px;
+    }
+    .string p{
+        margin-top:-42px
+    }
+}
+    
+   
